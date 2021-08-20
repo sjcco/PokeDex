@@ -17,6 +17,10 @@ module.exports = {
         },
       },
       {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+      },
+      {
         test: /\.css/,
         use: [
           {
@@ -35,6 +39,11 @@ module.exports = {
         ],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true,
   },
   plugins: [
     htmlPlugin,

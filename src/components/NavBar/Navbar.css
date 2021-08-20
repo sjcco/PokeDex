@@ -1,0 +1,24 @@
+
+.nav {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  justify-content: space-between;
+}
+
+.nav-item {
+  font-size: 1.75rem;
+  color: white;
+  margin: auto 1rem;
+  text-align: center;
+}
+
+.nav-item a {
+  color: inherit;
+}
+
+.title {
+  width: 40%;
+  height: 50px;
+  margin: 0.3rem 0;
+}
