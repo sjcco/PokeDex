@@ -1,0 +1,20 @@
+
+.pkmn-type {
+  font-size: 15px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  width: 6em;
+  text-align: center;
+  display: inline-block;
+  border: 0.1em solid transparent;
+  padding: 0.1em 0.2em 0.2em;
+  margin: 0.1em 0.15em;
+  border-radius: 0.4em;
+}
+
+.pkmn-type span {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: white;
+  text-shadow: 0 0 0.2em black;
+}
