@@ -22,10 +22,14 @@ const Home = () => {
       });
   };
 
+  const toggleFilter = () => {
+    console.log('yeees');
+  };
+
   useEffect(() => loadPokemons(), []);
   return (
     <>
-      <NavBar btn="filter" />
+      <NavBar btn="filter" openFilter={toggleFilter} />
       <div className={container}>
         {pokemons.sort((poke1, poke2) => poke1.id - poke2.id).map(pokemon => (
           <Link key={pokemon.id} to={`/pokemon/${pokemon.name}`}>
