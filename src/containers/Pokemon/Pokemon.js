@@ -11,7 +11,6 @@ import Abilities from '../../components/Abilities/Abilities';
 const Pokemon = ({ location }) => {
   const [pokemon, setPokemon] = useState({});
   const [pokeData, setPokeData] = useState({});
-  const [evoChain, setEvoChain] = useState({});
   const [loading, setLoading] = useState(true);
 
   const getPokemon = () => {
@@ -22,11 +21,7 @@ const Pokemon = ({ location }) => {
         axios.get(resp.data.species.url)
           .then(resp => {
             setPokeData(resp.data);
-            axios.get(resp.data.evolution_chain.url)
-              .then(resp => {
-                setEvoChain(resp.data);
-                setLoading(false);
-              });
+            setLoading(false);
           });
       });
   };

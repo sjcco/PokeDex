@@ -22,9 +22,7 @@ const Home = () => {
       });
   };
 
-  const toggleFilter = () => {
-    console.log('yeees');
-  };
+  const toggleFilter = () => null;
 
   useEffect(() => loadPokemons(), []);
   return (
