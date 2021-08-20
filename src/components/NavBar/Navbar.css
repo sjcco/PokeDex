@@ -11,6 +11,8 @@
   color: white;
   margin: auto 1rem;
   text-align: center;
+  background-color: transparent;
+  border: none;
 }
 
 .nav-item a {

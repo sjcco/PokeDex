@@ -1,0 +1,17 @@
+
+.container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-titles {
+  width: auto;
+  margin: 1rem auto 0.5rem auto;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+}

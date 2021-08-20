@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import { nav, navItem, title } from './NavBar.css';
 import pokedex from '../../assets/images/title.png';
 
-const NavBar = ({ btn }) => {
+const NavBar = ({ btn, openFilter }) => {
   const navBtn = btn => {
     if (btn === 'filter') {
-      return (<div className={navItem}><i className="fas fa-filter" /></div>);
+      // eslint-disable-next-line jsx-a11y/control-has-associated-label
+      return (<button type="button" onClick={() => openFilter()} className={navItem}><i className="fas fa-filter" /></button>);
     }
     return (
       <div className={navItem}>
@@ -27,10 +28,12 @@ const NavBar = ({ btn }) => {
 
 NavBar.propTypes = {
   btn: PropTypes.string,
+  openFilter: PropTypes.func,
 };
 
 NavBar.defaultProps = {
   btn: 'filter',
+  openFilter: () => null,
 };
 
 export default NavBar;
