@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { nav, navItem, title } from './NavBar.css';
+import { nav, navItem, title } from './Navbar.css';
 import pokedex from '../../assets/images/title.png';
 
 const NavBar = ({ btn, openFilter }) => {
