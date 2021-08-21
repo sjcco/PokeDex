@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 45%;
+  position: fixed;
+  top: 28px;
+  right: -10px;
+  border-bottom-left-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  margin: 2rem 0.5rem;
+  background-color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container:last-child {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  margin: 0.5rem 0;
+}
