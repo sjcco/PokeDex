@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/Navbar';
 import { container } from './Home.css';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
+import TypeSelector from '../../components/TypeSelector/TypeSelector';
 
 const Home = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20');
+  const [visible, setVisible] = useState(false);
 
   const loadPokemons = () => {
     axios.get(loadMore)
@@ -22,7 +24,7 @@ const Home = () => {
       });
   };
 
-  const toggleFilter = () => null;
+  const toggleFilter = () => (visible ? setVisible(false) : setVisible(true));
 
   useEffect(() => loadPokemons(), []);
   return (
@@ -39,6 +41,7 @@ const Home = () => {
             />
           </Link>
         ))}
+        {visible && <TypeSelector />}
       </div>
     </>
   );
