@@ -5,10 +5,11 @@ import NavBar from '../../components/NavBar/Navbar';
 import { container } from './Home.css';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
-import { fetchPokemons, fetchPokemonsByType } from '../../actions';
+import { fetchPokemonsByType } from '../../actions';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const state = useSelector(state => state.pokemonReducer);
   const filterState = useSelector(state => state.filterReducer);
   const { pokemons } = filterState;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TypeBadge from '../TypeBadge/TypeBadge';
 import { container, btn } from './TypeSelector.css';
 
@@ -14,6 +15,10 @@ const TypeSelector = ({ filter }) => {
       ))}
     </div>
   );
+};
+
+TypeSelector.propTypes = {
+  filter: PropTypes.func.isRequired,
 };
 
 export default TypeSelector;
