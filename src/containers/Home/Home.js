@@ -5,21 +5,26 @@ import NavBar from '../../components/NavBar/Navbar';
 import { container } from './Home.css';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
-import fetchPokemons from '../../actions';
+import { fetchPokemons, fetchPokemonsByType } from '../../actions';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
   const state = useSelector(state => state.pokemonReducer);
-  const { pokemons } = state;
+  const filterState = useSelector(state => state.filterReducer);
+  const { pokemons } = filterState;
 
   const toggleFilter = () => (visible ? setVisible(false) : setVisible(true));
 
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(fetchPokemons()), []);
+  const filterHandler = type => {
+    dispatch(fetchPokemonsByType(type));
+  };
+
+  useEffect(() => dispatch(fetchPokemonsByType('all')), []);
 
   const renderPokemons = () => {
-    if (state.loading) {
+    if (filterState.loading) {
       return (<h1>...loading</h1>);
     }
     return (
@@ -40,7 +45,7 @@ const Home = () => {
       <NavBar btn="filter" openFilter={toggleFilter} />
       <div className={container}>
         {renderPokemons()}
-        {visible && <TypeSelector />}
+        {visible && <TypeSelector filter={filterHandler} />}
       </div>
     </>
   );
