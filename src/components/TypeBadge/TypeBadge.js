@@ -12,7 +12,7 @@ const TypeBadge = ({ type }) => {
       case 'water':
         return '#6890f0';
       case 'grass':
-        return '#98d8d8';
+        return '#98d888';
       case 'flying':
         return '#a890f0';
       case 'fighting':
@@ -47,7 +47,6 @@ const TypeBadge = ({ type }) => {
   };
 
   const colorStyle = {
-    // stylelint-disable-next-line
     backgroundColor: typeclass(type),
   };
 

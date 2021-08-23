@@ -6,6 +6,7 @@ import { container } from './Home.css';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
 import TypeSelector from '../../components/TypeSelector/TypeSelector';
 import { fetchPokemonsByType } from '../../actions';
+import Spinner from '../../components/spinner/spinner';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
@@ -33,7 +34,7 @@ const Home = () => {
   }, [sortedPokemons]);
 
   if (loading) {
-    <h1>...loading</h1>;
+    return (<Spinner />);
   }
 
   return (

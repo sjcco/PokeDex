@@ -7,8 +7,11 @@ import pokedex from '../../assets/images/title.png';
 const NavBar = ({ btn, openFilter }) => {
   const navBtn = btn => {
     if (btn === 'filter') {
-      // eslint-disable-next-line jsx-a11y/control-has-associated-label
-      return (<button type="button" onClick={() => openFilter()} className={navItem}><i className="fas fa-filter" /></button>);
+      return (
+        <button type="button" onClick={() => openFilter()} className={navItem}>
+          <i className="fas fa-filter" />
+        </button>
+      );
     }
     return (
       <div className={navItem}>
