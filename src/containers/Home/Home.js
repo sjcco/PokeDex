@@ -9,43 +9,51 @@ import { fetchPokemonsByType } from '../../actions';
 
 const Home = () => {
   const [visible, setVisible] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const state = useSelector(state => state.pokemonReducer);
-  const filterState = useSelector(state => state.filterReducer);
-  const { pokemons } = filterState;
+  const [loading, setLoading] = useState(true);
+  const sortedPokemons = useSelector(
+    state => state.filterReducer.pokemons.sort((poke1, poke2) => poke1.id - poke2.id),
+  );
 
   const toggleFilter = () => (visible ? setVisible(false) : setVisible(true));
 
   const dispatch = useDispatch();
 
   const filterHandler = type => {
+    setLoading(true);
     dispatch(fetchPokemonsByType(type));
   };
 
   useEffect(() => dispatch(fetchPokemonsByType('all')), []);
 
-  const renderPokemons = () => {
-    if (filterState.loading) {
-      return (<h1>...loading</h1>);
-    }
-    return (
-      pokemons.sort((poke1, poke2) => poke1.id - poke2.id).map(pokemon => (
-        <Link key={pokemon.id} to={`/pokemon/${pokemon.name}`}>
-          <PokemonCard
-            pokemon={pokemon.name}
-            type1={pokemon.types[0].type.name}
-            type2={pokemon.types[1] === undefined ? 'null' : pokemon.types[1].type.name}
-            pokeIcon={pokemon.sprites.other['official-artwork'].front_default}
-          />
-        </Link>
-      )));
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(false);
+      setLoading(false);
+    }, 150);
+  }, [sortedPokemons]);
+
+  if (loading) {
+    <h1>...loading</h1>;
+  }
 
   return (
     <>
       <NavBar btn="filter" openFilter={toggleFilter} />
       <div className={container}>
-        {renderPokemons()}
+        {sortedPokemons.map(pokemon => (
+          <Link key={pokemon.id} to={`/pokemon/${pokemon.name}`}>
+            {(pokemon.sprites.other['official-artwork'].front_default
+              && (
+              <PokemonCard
+                pokemon={pokemon.name}
+                type1={pokemon.types[0].type.name}
+                type2={pokemon.types[1] === undefined ? 'null' : pokemon.types[1].type.name}
+                pokeIcon={pokemon.sprites.other['official-artwork'].front_default}
+              />
+              ))}
+          </Link>
+        ))}
+
         {visible && <TypeSelector filter={filterHandler} />}
       </div>
     </>

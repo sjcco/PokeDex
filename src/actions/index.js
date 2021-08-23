@@ -39,6 +39,7 @@ const fetchPokemonsByType = pkmnType => async dispatch => {
       dispatch({
         type: 'FETCH_POKEMONS_byTYPE_SUCCESS',
         payload: {
+          next: null,
           pokemons: pokes,
         },
       });
@@ -50,7 +51,7 @@ const fetchPokemonsByType = pkmnType => async dispatch => {
       });
 
       dispatch({
-        type: 'FETCH_POKEMONS_SUCCESS',
+        type: 'FETCH_POKEMONS_byTYPE_SUCCESS',
         payload: {
           next: response.data.next,
           pokemons: pokes,

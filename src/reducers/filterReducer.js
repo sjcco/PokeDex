@@ -1,4 +1,5 @@
 const initialState = {
+  next: null,
   pokemons: [],
   loading: false,
   error: null,
@@ -14,6 +15,7 @@ const filterReducer = (state = initialState, action) => {
     case 'FETCH_POKEMONS_byTYPE_SUCCESS':
       return {
         ...state,
+        next: action.payload.next,
         pokemons: action.payload.pokemons,
         loading: false,
       };
