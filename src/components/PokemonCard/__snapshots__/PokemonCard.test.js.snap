@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content 1`] = `
+<figure
+  className="container"
+>
+  <img
+    alt="..."
+    className="icon"
+    src="icon"
+  />
+  <figcaption
+    className="caption"
+  >
+    <h3>
+      pokemon
+    </h3>
+    <div
+      className="typeContainer"
+    >
+      <div
+        className="pkmnType"
+        style={
+          Object {
+            "backgroundColor": null,
+          }
+        }
+      >
+        <span>
+          type1
+        </span>
+      </div>
+      <div
+        className="pkmnType"
+        style={
+          Object {
+            "backgroundColor": null,
+          }
+        }
+      >
+        <span>
+          type2
+        </span>
+      </div>
+    </div>
+  </figcaption>
+</figure>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="info"
+  >
+    <div
+      className="infoHeader"
+    >
+      <h1>
+        name
+      </h1>
+      <p>
+        #00id
+      </p>
+    </div>
+    <h2
+      className="genusTitle"
+    >
+      genus
+    </h2>
+    <div
+      className="badgesContainer"
+    >
+      <div
+        className="pkmnType"
+        style={
+          Object {
+            "backgroundColor": null,
+          }
+        }
+      >
+        <span>
+          type1
+        </span>
+      </div>
+      <div
+        className="pkmnType"
+        style={
+          Object {
+            "backgroundColor": null,
+          }
+        }
+      >
+        <span>
+          type2
+        </span>
+      </div>
+    </div>
+  </div>
+  <img
+    alt=""
+    className="cardIcon"
+    src="icon"
+  />
+</div>
+`;

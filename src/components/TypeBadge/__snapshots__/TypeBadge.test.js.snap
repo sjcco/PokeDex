@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content 1`] = `
+<div
+  className="pkmnType"
+  style={
+    Object {
+      "backgroundColor": null,
+    }
+  }
+>
+  <span>
+    type
+  </span>
+</div>
+`;

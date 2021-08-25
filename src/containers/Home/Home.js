@@ -30,7 +30,7 @@ const Home = () => {
     setTimeout(() => {
       setVisible(false);
       setLoading(false);
-    }, 150);
+    }, 250);
   }, [sortedPokemons]);
 
   if (loading) {

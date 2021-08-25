@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content 1`] = `
+<div
+  className="container"
+>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    All
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#a8a878",
+        }
+      }
+    >
+      <span>
+        normal
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#f08030",
+        }
+      }
+    >
+      <span>
+        fire
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#6890f0",
+        }
+      }
+    >
+      <span>
+        water
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#98d888",
+        }
+      }
+    >
+      <span>
+        grass
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#a890f0",
+        }
+      }
+    >
+      <span>
+        flying
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#c03028",
+        }
+      }
+    >
+      <span>
+        fighting
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#a040a0",
+        }
+      }
+    >
+      <span>
+        poison
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#f8d030",
+        }
+      }
+    >
+      <span>
+        electric
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#e0c068",
+        }
+      }
+    >
+      <span>
+        ground
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#b8a038",
+        }
+      }
+    >
+      <span>
+        rock
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#f85888",
+        }
+      }
+    >
+      <span>
+        psychic
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#98d8d8",
+        }
+      }
+    >
+      <span>
+        ice
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#a8b820",
+        }
+      }
+    >
+      <span>
+        bug
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#705898",
+        }
+      }
+    >
+      <span>
+        ghost
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#b8b8d0",
+        }
+      }
+    >
+      <span>
+        steel
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#7038f8",
+        }
+      }
+    >
+      <span>
+        dragon
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#705848",
+        }
+      }
+    >
+      <span>
+        dark
+      </span>
+    </div>
+  </button>
+  <button
+    className="btn"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="pkmnType"
+      style={
+        Object {
+          "backgroundColor": "#f0b6bc",
+        }
+      }
+    >
+      <span>
+        fairy
+      </span>
+    </div>
+  </button>
+</div>
+`;
