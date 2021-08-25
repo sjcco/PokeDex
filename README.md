@@ -5,7 +5,7 @@
 ![screenshot](./screenshot.png)
 ![screenshot](./screenshot1.png)
 
-Mobile view of pokedex
+Mobile App. Pokedex designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game.
 
 ## Built With
 
