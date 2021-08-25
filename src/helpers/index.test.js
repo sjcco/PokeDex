@@ -28,7 +28,17 @@ test('returns a string', () => {
   expect(typeof res === 'string').toBe(true);
 });
 
-test('returns a value with units in meters', () => {
+test('returns a value with units in kilograms', () => {
   const res = hectoToKilos(2);
   expect(res.includes('kg')).toBe(true);
+});
+
+test('returns a string', () => {
+  const res = pkmnColor('yellow');
+  expect(typeof res === 'string').toBe(true);
+});
+
+test('returns a string', () => {
+  const res = pkmnColor('yellow');
+  expect(/^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(res)).toBe(true);
 });
