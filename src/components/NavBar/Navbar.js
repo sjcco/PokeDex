@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { nav, navItem, title } from './Navbar.css';
-import pokedex from '../../assets/images/title.png';
 
 const NavBar = ({ btn, openFilter }) => {
   const navBtn = btn => {
@@ -23,7 +22,7 @@ const NavBar = ({ btn, openFilter }) => {
   return (
     <div className={nav}>
       <div className={navItem}><i className="fas fa-bars" /></div>
-      <img src={pokedex} alt="..." className={title} />
+      <img src="https://i.ibb.co/Th6HjDF/title.png" alt="..." className={title} />
       {navBtn(btn)}
     </div>
   );

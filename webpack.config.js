@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     publicPath: '',
   },
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
       {
         test: /\.css/,
