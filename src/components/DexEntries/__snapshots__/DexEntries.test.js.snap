@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders content 1`] = `
+<div
+  className="container"
+>
+  <p>
+    it
+  </p>
+  <h4
+    className="entryDescription"
+  >
+    PokeDex entry
+  </h4>
+  <div
+    className="weightHeight"
+  >
+    <div
+      className="weightContainer"
+    >
+      <h3
+        className="dataDisplay"
+      >
+        works
+      </h3>
+      <h4
+        className="dataNames"
+      >
+        weight
+      </h4>
+    </div>
+    <div
+      className="heightContainer"
+    >
+      <h3
+        className="dataDisplay"
+      >
+        !!!
+      </h3>
+      <h4
+        className="dataNames"
+      >
+        height
+      </h4>
+    </div>
+  </div>
+</div>
+`;

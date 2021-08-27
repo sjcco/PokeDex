@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -7,6 +8,12 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    publicPath: '',
+  },
   module: {
     rules: [
       {
@@ -18,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
       {
         test: /\.css/,
@@ -39,11 +46,6 @@ module.exports = {
         ],
       },
     ],
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    hot: true,
   },
   plugins: [
     htmlPlugin,

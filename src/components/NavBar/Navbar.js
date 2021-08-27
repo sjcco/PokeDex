@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { nav, navItem, title } from './NavBar.css';
-import pokedex from '../../assets/images/title.png';
+import { nav, navItem, title } from './Navbar.css';
 
 const NavBar = ({ btn, openFilter }) => {
   const navBtn = btn => {
     if (btn === 'filter') {
-      // eslint-disable-next-line jsx-a11y/control-has-associated-label
-      return (<button type="button" onClick={() => openFilter()} className={navItem}><i className="fas fa-filter" /></button>);
+      return (
+        <button type="button" onClick={() => openFilter()} className={navItem}>
+          <i className="fas fa-filter" />
+        </button>
+      );
     }
     return (
       <div className={navItem}>
@@ -20,7 +22,7 @@ const NavBar = ({ btn, openFilter }) => {
   return (
     <div className={nav}>
       <div className={navItem}><i className="fas fa-bars" /></div>
-      <img src={pokedex} alt="..." className={title} />
+      <img src="https://i.ibb.co/Th6HjDF/title.png" alt="..." className={title} />
       {navBtn(btn)}
     </div>
   );

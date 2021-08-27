@@ -7,6 +7,7 @@ import { container, cardTitles } from './Pokemon.css';
 import DexEntries from '../../components/DexEntries/DexEntries';
 import { decimToMeters, hectoToKilos, pkmnColor } from '../../helpers';
 import Abilities from '../../components/Abilities/Abilities';
+import Spinner from '../../components/spinner/spinner';
 
 const Pokemon = ({ location }) => {
   const [pokemon, setPokemon] = useState({});
@@ -28,7 +29,12 @@ const Pokemon = ({ location }) => {
 
   useEffect(() => getPokemon(), []);
 
-  if (loading) return (<h1>loading...</h1>);
+  if (loading) {
+    return (
+      <Spinner />
+    );
+  }
+
   const bgColor = pkmnColor(pokeData.color.name);
 
   return (
