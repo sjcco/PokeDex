@@ -14,7 +14,7 @@ exports[`renders content 1`] = `
   <img
     alt="..."
     className="title"
-    src="test-file-stub"
+    src="https://i.ibb.co/Th6HjDF/title.png"
   />
   <button
     className="navItem"

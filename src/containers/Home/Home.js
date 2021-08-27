@@ -11,6 +11,8 @@ import Spinner from '../../components/spinner/spinner';
 const Home = () => {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [pokemons, setPokemons] = useState();
+  const state = useSelector(state => state);
   const sortedPokemons = useSelector(
     state => state.filterReducer.pokemons.sort((poke1, poke2) => poke1.id - poke2.id),
   );
@@ -24,14 +26,17 @@ const Home = () => {
     dispatch(fetchPokemonsByType(type));
   };
 
-  useEffect(() => dispatch(fetchPokemonsByType('all')), []);
+  useEffect(() => {
+    dispatch(fetchPokemonsByType('all'));
+  }, []);
 
   useEffect(() => {
+    setPokemons(sortedPokemons);
     setTimeout(() => {
       setVisible(false);
       setLoading(false);
-    }, 250);
-  }, [sortedPokemons]);
+    }, 500);
+  }, [state]);
 
   if (loading) {
     return (<Spinner />);
@@ -41,7 +46,7 @@ const Home = () => {
     <>
       <NavBar btn="filter" openFilter={toggleFilter} />
       <div className={container}>
-        {sortedPokemons.map(pokemon => (
+        {pokemons.map(pokemon => (
           <Link key={pokemon.id} to={`/pokemon/${pokemon.name}`}>
             {(pokemon.sprites.other['official-artwork'].front_default
               && (
